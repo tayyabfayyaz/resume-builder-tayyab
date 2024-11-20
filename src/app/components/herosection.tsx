@@ -4,7 +4,7 @@ import Image from "next/image";
 function HeroSection(){
     return(
         <>
-        <div className="left-container w-3/5 h-screen float-start flex flex-col justify-center items-center px-10">
+        <div className="left-container w-full md:w-full lg:w-3/5 xl:w-3/5 min-h-fit py-10 lg:h-screen xl:h-screen float-start flex  flex-col justify-center items-center px-10">
             <h2 className="text-gray-900 text-3xl my-5 font-bold shadow-sm shadow-customBlue">WELLCOME TO OUR </h2>
             <h2 className="text-2xl mb-5 font-bold shadow-sm shadow-customBlue">RESUME BUILDER</h2>
             <h2 className="text-gray-900 text-xl mb-5 font-bold shadow-sm shadow-customBlue">WEBSITE</h2>
@@ -21,7 +21,7 @@ function HeroSection(){
             <Button text="NOW CREATE" className="text-2xl py-2 px-5 bg-customTeal text-white font-bold rounded-2xl mt-10 hover:shadow-lg hover:shadow-customBlue" />
 
         </div>
-        <div className="right-container w-2/5 h-screen float-end flex justify-center items-center">
+        <div className="right-container w-full md:w-full lg:w-2/5 xl:w-2/5 px-5 py-5 h-screen float-end block md:block lg:flex xl:flex justify-center items-center">
             <div className="image_conatiner">
                 <Image 
                     src='/resume-img.png'

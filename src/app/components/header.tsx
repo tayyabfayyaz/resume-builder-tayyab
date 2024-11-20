@@ -44,11 +44,12 @@ function Header(){
                         <li><Link href="/" >Home</Link></li>
                         <li><Link href='/resume' >Resume</Link></li>
                         <li><Link href="/" >FAQ</Link></li>
+                        <li><Link href="/create-resume" >Create Resume</Link></li>
                     </ul>
-                    <Button
+                    {/* <Button
                         text="Create Resume"
                         className="my-10 bg-customTeal py-2 px-4 border-2 border-customBlue shadow-md shadow-customBlue"
-                    />
+                    /> */}
                 </SheetDescription>
                 </SheetHeader>
             </SheetContent>

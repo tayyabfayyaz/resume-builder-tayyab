@@ -3,17 +3,8 @@
 import DotPattern from "@/components/ui/dot-pattern";
 import ShineBorder from "@/components/ui/shine-border";
 import { cn } from "@/lib/utils";
-import { AddNewSkill } from "../components/skills";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-  } from "@/components/ui/select"
-  
 
 
 
@@ -71,7 +62,7 @@ function CreateResume(){
 
     return(
         <main>
-            <div className="resume_form w-fit h-fit py-5 block mx-auto my-10 relative">
+            <div className="resume_form w-full md:w-full lg:w-fit xl:w-fit h-fit py-5 px-5 block mx-1 md:mx-5 lg:mx-auto xl:mx-auto my-10 relative">
                 <ShineBorder>
                 <form action="" method="post">
                     <label className="text-xl ml-5 ">Name</label>
@@ -81,7 +72,7 @@ function CreateResume(){
                         value={fullName}
                         id="full_name" 
                         onChange={(e) => setfullname(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Father Name</label>
@@ -91,7 +82,7 @@ function CreateResume(){
                         value={fatherName} 
                         id="father_name"
                         onChange={(e) => setfathername(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">CNIC No.</label>
@@ -101,7 +92,7 @@ function CreateResume(){
                         value={CNIC}
                         id="cnic"
                         onChange={(e) => setcnic(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Address</label>
@@ -111,7 +102,7 @@ function CreateResume(){
                         value={address1}
                         id="address_1"
                         onChange={(e) => setaddress1(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Adress 2</label>
@@ -121,7 +112,7 @@ function CreateResume(){
                         value={address2}
                         id="address_2"
                         onChange={(e) => setaddress2(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Date Of Birth</label>
@@ -131,7 +122,7 @@ function CreateResume(){
                         id="dob"
                         placeholder="Select Your Date"
                         onChange={(e) => setdob(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Phone No.</label>
@@ -141,7 +132,7 @@ function CreateResume(){
                         value={phoneNo}
                         id="phone"
                         onChange={(e) => setphoneNo(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Email</label>
@@ -151,7 +142,7 @@ function CreateResume(){
                         value={email}
                         id="email"
                         onChange={(e) => setemail(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Skills</label>
@@ -161,7 +152,7 @@ function CreateResume(){
                         value={skills}
                         id="skill"
                         onChange={(e) => setskills(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-12 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     />
 
                     <label className="text-xl ml-5 ">Objective</label>
@@ -170,7 +161,7 @@ function CreateResume(){
                         id="objective"
                         placeholder="Write objective according to your profession"
                         onChange={(e) => setobjective(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-20 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     ></textarea>
 
                     <label className="text-xl ml-5 ">Education</label>
@@ -179,7 +170,7 @@ function CreateResume(){
                         id="education"
                         placeholder="Metric (Computer Scince) from abc School"
                         onChange={(e) => seteducation(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-20 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     ></textarea>
 
                     <label className="text-xl ml-5 ">Experience</label>
@@ -188,7 +179,7 @@ function CreateResume(){
                         value={experience}
                         id="experience"
                         onChange={(e) => setexperience(e.target.value)}
-                        className="block w-[600px] h-12 px-5 mx-5 my-5 border-2 rounded-lg"
+                        className="block w-full md:w-full lg:w-[600px] xl:w-[600px] h-20 px-5 mx-0 md:mx-0 lg:mx-5 xl:mx-5 my-5 border-2 rounded-lg"
                     ></textarea>
 
                     <button
@@ -199,6 +190,8 @@ function CreateResume(){
                     >
                         Submit
                     </button>
+
+                    
 
                 </form>
                 </ShineBorder>
@@ -212,7 +205,11 @@ function CreateResume(){
     );
 };
 
-export default CreateResume;
 
-
-
+export default function SuspenseWrapper() {
+    return (
+        <Suspense fallback={<div>Loading form...</div>}>
+            <CreateResume />
+        </Suspense>
+    );
+}

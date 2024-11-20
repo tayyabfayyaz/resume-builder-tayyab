@@ -3,7 +3,7 @@
 import { FaAngleDown } from "react-icons/fa";
 import { MdPhoneInTalk, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { useSearchParams } from "next/navigation";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
@@ -147,12 +147,12 @@ const ReadyResume: React.FC = () => {
     );
 };
 
-export default ReadyResume;
 
 
-
-
-
-
-
-
+export default function SuspenseWrapper() {
+    return (
+        <Suspense fallback={<div>Loading form...</div>}>
+            <ReadyResume />
+        </Suspense>
+    );
+}

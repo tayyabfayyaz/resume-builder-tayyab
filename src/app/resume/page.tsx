@@ -9,8 +9,8 @@ import { TbWorldCode } from "react-icons/tb";
 function ResumePage(){
     return(
         <main>
-            <div className="paper_size bg-white w-full h-fit py-10 flex">
-                <div className="left_container bg-gray-500 w-1/3 h-fit mx-8 rounded-t-full">
+            <div className="paper_size bg-white w-full h-fit py-10 block md:block lg:flex xl:flex">
+                <div className="left_container bg-gray-500 w-full md:w-full lg:w-1/3 xl:w-1/3 h-fit mx-0 md:mx-4 lg:mx-8 xl:mx-8 py-10 md:py-10 lg:py-5 xl:py-5 rounded-t-full">
                     <Image 
                         src='/tayyabpic.jpg'
                         alt="Profile Image"
@@ -64,19 +64,21 @@ function ResumePage(){
 
                     <ul className='text-white text-xl ml-12 leading-10 my-10'>
                         <li className='flex gap-2'><MdPhoneInTalk className='mt-2' /> +92 3182997727</li>
-                        <li className='flex gap-2'><MdOutlineEmail className='mt-2' /> fayyaztayyab931@gmail.com</li>
+                        <li className='flex gap-2'><MdOutlineEmail className='mt-2' /> fayyaztayyab931</li>
                         <li className='flex gap-2'><TbWorldCode className='mt-2' /> tayyab-web.vercel.app</li>
                         <li className='flex gap-2'><MdLocationOn className='mt-2' /> Karachi, Pakistan</li>
                     </ul>
 
                 </div>
-                <div className="right_container w-2/3 h-fit">
+
+
+                <div className="right_container w-full md:w-full lg:w-2/3 xl:w-2/3 h-fit ">
                     <div className="name_heading pb-5 pt-16 text-center">
-                        <h2 className='text-gray-900 text-5xl my-5 font-extrabold'>TAYYAB FAYYAZ</h2>
+                        <h2 className='text-gray-900 text-3xl md:text-3xl lg:text-5xl xl:text-5xl my-5 font-extrabold'>TAYYAB FAYYAZ</h2>
                         <h3 className='text-white text-xl mt-5 font-bold w-full py-2 bg-gray-700'>DEVELOPER</h3>
                     </div>
 
-                    <div className="heading w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
+                    <div className="heading w-full md:w-full lg:w-[500px] xl:w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
                         <h3>Education</h3>
                     </div>
 
@@ -99,7 +101,7 @@ function ResumePage(){
                         </li>
                     </ul>
 
-                    <div className="heading w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
+                    <div className="heading w-full md:w-full lg:w-[500px] xl:w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
                         <h3>Experience</h3>
                     </div>
 
@@ -109,7 +111,7 @@ function ResumePage(){
                         </li>
                     </ul>
 
-                    <div className="heading w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
+                    <div className="heading w-full md:w-full lg:w-[500px] xl:w-[500px] bg-gray-700 text-white text-start text-2xl font-bold mt-12 py-3 px-5 rounded-e-full shadow-md shadow-black">
                         <h3>Refrence</h3>
                     </div>
 
